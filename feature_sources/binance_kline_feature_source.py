@@ -168,12 +168,17 @@ class BinanceKlineFeatureSource(FeatureSource):
                 f"&limit={self._QUERY_LIMIT}"
             )
 
+            proxies = {
+                'http': 'http://192.168.86.104:3128',
+                'https': 'http://192.168.86.104:3128',
+            }
+
             success = False
             response_row_count = 0
             # Loop for retries
             while True:
                 try:
-                    response = requests.get(url)
+                    response = requests.get(url, proxies=proxies)
 
                     if response.status_code >= HTTPStatus.BAD_REQUEST:
                         try:
