@@ -94,42 +94,6 @@ if __name__ == "__main__":
     """
 
     base_mining_models = {
-        "model_v4_1": {
-            "filename": "model_v4_1.h5",
-            "sample_count": 100,
-            "id": "model2308",
-            "prediction_count": 1,
-        },
-        "model_v4_2": {
-            "filename": "model_v4_2.h5",
-            "sample_count": 500,
-            "id": "model3005",
-            "prediction_count": 1,
-        },
-        "model_v4_3": {
-            "filename": "model_v4_3.h5",
-            "sample_count": 100,
-            "id": "model3103",
-            "prediction_count": 1,
-        },
-        "model_v4_4": {
-            "filename": "model_v4_4.h5",
-            "sample_count": 100,
-            "id": "model3104",
-            "prediction_count": 1,
-        },
-        "model_v4_5": {
-            "filename": "model_v4_5.h5",
-            "sample_count": 100,
-            "id": "model3105",
-            "prediction_count": 1,
-        },
-        "model_v4_6": {
-            "id": "model3106",
-            "filename": "model_v4_6.h5",
-            "sample_count": 100,
-            "prediction_count": 1,
-        },
         "model_v5_1": {
             "id": "model5000",
             "filename": "model_v5_1.h5",
