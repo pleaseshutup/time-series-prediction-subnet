@@ -171,7 +171,7 @@ class KrakenKlineFeatureSource(FeatureSource):
 
                 if response.status_code >= HTTPStatus.BAD_REQUEST:
                     self._logger.error(
-                        f"HTTP error {response.status_code}: {response.reason}",
+                        f"Kraken HTTP error {response.status_code}: {response.reason}",
                     )
                 else:
                     response_data = response.json()

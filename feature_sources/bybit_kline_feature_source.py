@@ -157,6 +157,11 @@ class BybitKlineFeatureSource(FeatureSource):
                 interval_ms * (page_sample_count - 1)
             )
 
+            proxies = {
+                'http': 'http://192.168.86.104:3128',
+                'https': 'http://192.168.86.104:3128',
+            }
+
             url = (
                 "https://api.bybit.com/v5/market/kline"
                 f"?category={self._category}&symbol={self._symbol}"
@@ -168,11 +173,11 @@ class BybitKlineFeatureSource(FeatureSource):
             # Loop for retries
             while True:
                 try:
-                    response = requests.get(url)
+                    response = requests.get(url, proxies=proxies)
 
                     if response.status_code >= HTTPStatus.BAD_REQUEST:
                         self._logger.error(
-                            f"HTTP error {response.status_code}: {response.reason}",
+                            f"Bybit HTTP error {response.status_code}: {response.reason}",
                         )
                     else:
                         response_data = response.json()

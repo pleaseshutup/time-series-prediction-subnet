@@ -156,7 +156,7 @@ class CoinbaseKlineFeatureSource(FeatureSource):
                         except JSONDecodeError:
                             coinbase_error = ""
                         self._logger.error(
-                            f"HTTP error {response.status_code}: {response.reason}"
+                            f"Coinbase HTTP error {response.status_code}: {response.reason}"
                             f"{coinbase_error}",
                         )
                     else:

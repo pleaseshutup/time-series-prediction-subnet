@@ -189,7 +189,7 @@ class BinanceKlineFeatureSource(FeatureSource):
                         except JSONDecodeError:
                             binance_error = ""
                         self._logger.error(
-                            f"HTTP error {response.status_code}: {response.reason}"
+                            f"Binance HTTP error {response.status_code}: {response.reason}"
                             f"{binance_error}",
                         )
                     else:
